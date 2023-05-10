@@ -283,15 +283,167 @@ html{
     border-radius: 4px
     }
 
+.mqlist{
+    display:none;
+}
 
 
+    .mqlist ul {
+        /* position: fixed; */
+        margin-top: 20px;
+        /* top: 150px;
+        left: 0; */
+        z-index: 4;
+        width: 100%;
+        padding: 40px;
+        font-size: 14px;
+        text-align: left;
+        background: white;
+    }
+
+    .mqlist ul li {
+        color: #1f1e1e;
+        border-bottom: 1px solid #477E1E;
+        padding: 8px;
+        display: block;
+    }
+
+    .mqlist ul a {
+        color: #1f1e1e;
+    }
+
+    .mobileflex{
+        display: flex;
+    justify-content: space-between;
+    margin: auto;
+
+    }
+
+    #iconcolor{
+        font-size: 25px;
+        color:white;
+    }
+
+    #xiconcolor{
+        font-size: 25px;
+        color:white;
+        display:none;
+    }
 
 
+@media (max-width: 1000px){
+    .head {
+        display:none;
+    }
+
+    .herotext h1 {
+        color: white;
+        line-height: 0.8em;
+        margin-top: 10px;
+        font-size: 50px;
+    }
+
+    .mobileflex {
+        padding-top:30px;
+        padding-bottom:15px;
+        align-items:center;
+    }
+
+    .herotext p {
+        font-size: 13px;
+        font-weight: 300;
+    }
+}
 
 
+@media (max-width: 800px){
+    .heroflex {
+        /* margin-top: 20px; */
+        display: block;
+    }
 
+    .whatishead h1 {
+        font-size: 45px;
+        margin-top: -10px;
+    }
 
+    .whatistext p {
+        margin-top:20px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.8em;
+    }
 
+    .whatisflex {
+        display: block;
+        /* padding-top: 80px;
+        width: 85%;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 60px; */
+    }
+
+    .heroimage img {
+        margin-top:35px;
+    }
+
+    /* .cdtimeflex {
+        display:  block;
+    } */
+
+    .cdtimeflex {
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        width: 85%;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .cdtimeflex p {
+        font-size: 17px;
+    }
+
+    .cdflex {
+        display:block;
+    }
+
+    .cdtext h1 {
+        font-size: 50px;
+        font-weight: 300;
+    }
+
+    .cdvenue {
+        width:90%;
+        margin:auto;
+        margin-top:20px;
+        margin-bottom:20px;
+        text-align:center;
+        font-size: 14px;
+    }
+
+    .cdmoreinfomain {
+        margin-top: 10px;
+        width: 85%;
+        display: block;
+        margin: auto;
+        align-items: left;
+    }
+
+    .cdmoreinfo {
+        display: block;
+    }
+
+    .dot{
+        display:none;
+    }
+
+    .cdmoreinfotext {
+        margin-left:10px;
+        margin-bottom:10px;
+    }
+
+}
 /* Icon 1
 
 #nav-icon1{

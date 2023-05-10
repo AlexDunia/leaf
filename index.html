@@ -33,13 +33,47 @@
           </div>
 
           <div class="headlinks">
-            <li> Home </li>
-            <li> What we are </li>
-            <li> More </li>
-            <li> Join us </li>
+            <li id="home"> Home </li>
+            <li id="who"> Who we are </li>
+            <li id="more"> More Information</li>
+            <li id="join">  Join us </li>
           </div>
 
         </div>
+
+        <!-- This, for the mobile device  -->
+
+        <div class="mobileflex">
+
+            <div class="headimage">
+                <a href="index.html"> <img src="images/LEAFLOGO.png" width="100px" alt="Henrochielimited"> </a>
+              </div>
+
+              <div onclick="menutoggle()">
+                <i class="fa-solid fa-bars" id="iconcolor"></i>
+                <i class="fa-solid fa-xmark" id="xiconcolor"></i>
+              </div>
+
+
+
+            <!-- <button class="menu"  onclick="menutoggle()">
+
+              </button> -->
+
+            </div>
+
+        <div class="mqlist">
+
+            <ul class="mqul">
+                <li> <a href="index.html"> Home </a> </li>
+                <li> <a href="aboutus.html"> Who we are </a> </li>
+                <li> <a href="services.html"> More Information </a> </li>
+                <li> <a href="contact.html"> Join us </a> </li>
+            </ul>
+
+        </div>
+
+        <!-- End of mobile device -->
 
         <!-- Hero -->
 
@@ -66,7 +100,7 @@
 
     <div class="whatisflex">
 
-        <div class="whatishead">
+        <div class="whatishead" id="who">
         <h3> What is </h3>
         <h1> The </h1>
         <h1> Gathering? </h1>
@@ -154,7 +188,7 @@
 
 </div>
 
-    <div class="cdvenue">
+    <div class="cdvenue" id="more">
         <p> Caritas Hotel, Ilasan behind Elevation Church before Jakande. </p>
      </div>
 
@@ -236,6 +270,41 @@
 
 <script src="https://kit.fontawesome.com/9ff47ec0f8.js" crossorigin="anonymous"></script>
 <script>
+
+window.addEventListener('DOMContentLoaded', function() {
+  // Get all navigation links
+  const navLinks = document.querySelectorAll('.headlinks li');
+
+  // Attach click event listener to each link
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+      // Prevent the default link behavior (scrolling to a new page)
+      event.preventDefault();
+
+      // Get the target section's ID from the link's ID attribute
+      const targetId = this.getAttribute('id');
+
+      // Scroll smoothly to the target section
+      const targetSection = document.getElementById(targetId);
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+});
+
+
+// function scrollToSection(sectionId) {
+//   var element = document.getElementById(sectionId);
+//   var scrollTo = element.offsetTop;
+//   window.scrollTo(0, scrollTo);
+// }
+
+// document.querySelectorAll("a").forEach(function(link) {
+//   link.addEventListener("click", function(event) {
+//     event.preventDefault();
+//     var sectionId = link.href.substring(1);
+//     scrollToSection(sectionId);
+//   });
+// });
 
 var countDownDate = new Date().getTime() + (2 * 24 * 60 * 60 * 1000);
 
@@ -324,6 +393,8 @@ window.addEventListener ("scroll", function () {
    function menutoggle(){
        const menuu = document.querySelector(".mqlist");
        const menul = document.querySelector(".mqul");
+       const xmark = document.querySelector("#xiconcolor");
+       const colorr = document.querySelector("#iconcolor");
        //  I think you should set a class from the main html
        //  make it recognisable with JS
        const burger = document.querySelector(".menu")
@@ -331,14 +402,18 @@ window.addEventListener ("scroll", function () {
 
          if (menuu.style.display === "block")
             {
-            menuu.style.display = "none";
-           burger.setAttribute('aria-expanded', burger.classList.contains('opened'))
-           burger.classList.remove('opened');
+                menuu.style.display = "none";
+               xmark.style.display = "none";
+               colorr.style.display = "block";
+        //    burger.setAttribute('aria-expanded', burger.classList.contains('opened'))
+        //    burger.classList.remove('opened');
             }
             else
             {
-               menuu.style.display = "block";
-                  burger.classList.toggle('opened');
+                menuu.style.display = "block";
+            xmark.style.display = "block";
+            colorr.style.display = "none";
+                //   burger.classList.toggle('opened');
               }
            }
 
