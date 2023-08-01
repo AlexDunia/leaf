@@ -430,6 +430,28 @@ html{
         animation: fadeIn 3s ease-in-out 3s;
     } */
 
+    .footer{
+        background: #477E1E;
+        color:white;
+        padding-top:60px;
+        padding-bottom:30px;
+       margin-top:100px;
+        text-align: center;
+        /* display:flex;
+        justify-content: center; */
+        align-items:center;
+    }
+
+    .fline hr{
+        margin:auto;
+        text-align: center;
+        margin-bottom:30px;
+        /* display:flex;
+        justify-content: center; */
+        align-items:center;
+        color:white;
+        width:80%;
+    }
 
 @media (max-width: 1000px){
     .head {

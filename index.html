@@ -185,7 +185,7 @@
     <div class="cdtimeflex">
 
     <div class="cdtime">
-       <p>  <i class="fa-solid fa-calendar-days"></i> August 29, 2023 </p>
+       <p>  <i class="fa-solid fa-calendar-days"></i> September, 2023 </p>
     </div>
 
     <div class="cdtime">
@@ -326,13 +326,59 @@
             <button class="btnform"> Submit </button>
              </div>
 
+             <input type="hidden" name="_next" value="https://leafbusinessclub.online/thanks.html">
+
             </div>
 
 
+            <br/>
+
+            <div class="footer">
+              <div class="fline">
+              <hr/>
+              </div>
+
+              <h3>
+                Copyright &copy; 2023.
+              </h3>
+            </div>
 </body>
 
 <script src="https://kit.fontawesome.com/9ff47ec0f8.js" crossorigin="anonymous"></script>
 <script>
+
+document.getElementById("usrform").addEventListener("submit", function (event) {
+    const nameInput = document.getElementsByName("name")[0];
+    const emailInput = document.getElementsByName("email")[0];
+    const companyInput = document.getElementsByName("company")[0];
+    const addressInput = document.getElementsByName("address")[0];
+    const phoneInput = document.getElementsByName("phone")[0];
+
+    if (nameInput.value.trim() === "") {
+      alert("Please enter your name.");
+      event.preventDefault();
+    }
+
+    if (emailInput.value.trim() === "") {
+      alert("Please enter your email.");
+      event.preventDefault();
+    }
+
+    if (companyInput.value.trim() === "") {
+      alert("Please specify if you are a company or an individual.");
+      event.preventDefault();
+    }
+
+    if (addressInput.value.trim() === "") {
+      alert("Please enter your operational address.");
+      event.preventDefault();
+    }
+
+    if (phoneInput.value.trim() === "") {
+      alert("Please enter your operational phone number.");
+      event.preventDefault();
+    }
+  });
 
 // window.addEventListener('DOMContentLoaded', function() {
 //   // Get all navigation links
@@ -377,7 +423,7 @@ alllinks.forEach(function(link){
 
 
 function countdown() {
-  var endDate = new Date("August 29, 2023 00:00:00").getTime();
+  var endDate = new Date("September 29, 2023 00:00:00").getTime();
 
   var timer = setInterval(function() {
     var now = new Date().getTime();
